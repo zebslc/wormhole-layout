@@ -14,6 +14,13 @@
         h2 {
             font-family: 'Amatic SC', cursive;
         }
+
+        #wwfb>span,
+        #wwin>span,
+        #wwtw>span,
+        #wwem>span {
+            display: none;
+        }
     </style>
 
 </head>
@@ -23,12 +30,6 @@
     <img alt="Wormhole logo" id="logo" src="greenedge.svg">
     <h1>Worthing Wormhole</h1>
     <h2>November 10th 2018</h2>
-
-    <div id="sale">
-        <a href="#" id="lnkBuy" title="Buy your tickets now">Buy tickets</a>
-        <a href="#" id="lnkDay" title="Buy day tickets now">Day</a>
-        <a href="#" id="lnkNight" title="Buy night tickets now">Night</a>
-    </div>
 
     <div id="news">
         <div id="feed">
@@ -55,60 +56,71 @@
             </app-newsitem>
         </div>
 
-        <ul id="social">
-            <li>
-                <a href="#" id="wwfbb" title="Our main facebook page">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
+        <div id="sale">
+            <h2>Buy your tickets</h2>
+            <a href="#" id="lnkBuy" title="Buy multipass tickets">Multipass tickets</a>
+            <a href="#" id="lnkDay" title="Buy day tickets">Buy Day</a>
+            <a href="#" id="lnkNight" title="Buy night tickets">Buy Night</a>
+        </div>
 
-            </li>
-            <li>
-                <a href="#" id="wwtwb" title="@Worthing Wormhole twitter account">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
+        <app-nav-buttons>
+            <h2>Navigate to other parts of our site</h2>
+            <ul aria-roledescription="navigation">
+                <li>
+                    <a href="#" title="An area of the site dedicated to cosplayers with competition info and prop/safety guides">Cosplayers</a>
+                </li>
+                <li>
+                    <a href="#" title="All the family friendly guests/events/workshops/stalls and our exciting Cre8tive St8tion zone">Families</a>
+                </li>
+                <li>
+                    <a href="#" title="A complete list of all our guests/events/stalls">Attractions</a>
+                </li>
+                <li>
+                    <a href="#" title="All you need to know about our amazing adult night party">Night party</a>
+                </li>
+                <li>
+                    <a href="#" title="A page showing all the other pages of our site such as the privacy policy">More...</a>
+                </li>
+            </ul>
+        </app-nav-buttons>
 
-            </li>
-            <li>
-                <a href="#" id="wwinb" title="@WorthingWormhole instagram account">
-                    <i class="fab fa-instagram"></i>
-                </a>
+        <div id="social">
+            <h2>Visit our social media sites</h2>
 
-            </li>
-            <li>
-                <a class="em" href="#" id="wwemb" title="Contact us by email (worthingwormhole@gmail.com)">
-                    <i class="fas fa-envelope"></i>
-                </a>
+            <ul>
+                <li>
+                    <a href="#" id="wwfb" title="Our main facebook page">
+                        <span aria-hidden="true">Go to wormhole facebook account</span>
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
 
-            </li>
-            <li>
-                <a class="tw" href="#" title="Buy a ticket">
-                    <i class="fas fa-ticket-alt"></i>
-                </a>
+                </li>
+                <li>
+                    <a href="#" id="wwtw" title="@Worthing Wormhole twitter account">
+                        <span aria-hidden="true">Go to wormhole twitter account</span>
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
 
-            </li>
-        </ul>
+                </li>
+                <li>
+                    <a href="#" id="wwin" title="@WorthingWormhole instagram account">
+                        <span aria-hidden="true">Go to wormhole instagram account</span>
+                        <i class="fab fa-instagram"></i>
+                    </a>
 
+                </li>
+                <li>
+                    <a class="em" href="#" id="wwem" title="Contact us by email (worthingwormhole@gmail.com)">
+                        <span aria-hidden="true">Send an email to worthing wormhole</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+
+                </li>
+            </ul>
+
+        </div>
     </div>
 
-    <app-nav-buttons>
-        <ul>
-            <li>
-                <a href="#">Cosplayers</a>
-            </li>
-            <li>
-                <a href="#">Families</a>
-            </li>
-            <li>
-                <a href="#">Attractions</a>
-            </li>
-            <li>
-                <a href="#">Night party</a>
-            </li>
-            <li>
-                <a href="#">More...</a>
-            </li>
-        </ul>
-    </app-nav-buttons>
 
 </body>
 
