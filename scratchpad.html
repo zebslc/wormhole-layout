@@ -1,0 +1,362 @@
+<head>
+    <style>
+        /* Box colours */
+
+        body {
+            background-color: #3b404e;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .item {
+            background-color: rgb(135, 212, 99, 0.5);
+            background-image: linear-gradient(130deg, #aC52D9 0%, #11ee2AFC 85%, #3EDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #fff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            opacity: 0.85;
+            filter: alpha(opacity=75);
+        }
+
+        .subitem {
+            background-color: rgb(119, 147, 201);
+            background-image: linear-gradient(130deg, #a352D9 0%, #337799 55%, #aEDFD7 100%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            color: #fff;
+            border-radius: 4px;
+            border: 6px solid #171717;
+            opacity: 0.95;
+            filter: alpha(opacity=75);
+        }
+
+        /* Desktop / Tablet landscape */
+
+        @supports (display:grid) {
+            @media (min-width: 1000px) and (min-height: 700px) {
+                .container {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 15px 6.5fr 0.5fr 0.5fr 6.5fr 0.7fr 0.3fr 3fr 15px;
+                    grid-template-rows: 15px 0.7fr 2.3fr 1.3fr 2fr 5fr 0.5fr 1.5fr 15px;
+                    grid-gap: 0;
+                    height: 100vh;
+                }
+
+                .logo {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 6;
+                    z-index: 5;
+                }
+
+                .title {
+                    grid-column: 4 / 7;
+                    grid-row: 3 / 5;
+                    z-index: 5;
+                }
+
+                .batman {
+                    grid-column: 2 / 9;
+                    grid-row: 2 / 9;
+                    z-index: -1;
+                }
+
+                .navbuttons {
+                    grid-column: 2 / 9;
+                    grid-row: 8 / 9;
+                    z-index: 5;
+                }
+
+                .buy {
+                    grid-column: 8 / 9;
+                    grid-row: 3 / 4;
+                    z-index: 5;
+                }
+
+                .shaded {
+                    grid-column: 1 / 10;
+                    grid-row: 3 / 4;
+                    z-index: 3;
+                }
+
+                .newsgrid {
+                    grid-column: 5 / 6;
+                    grid-row: 5 / 7;
+                    z-index: 5;
+                    display: grid;
+                    grid-template-columns: 0.5fr 5.5fr 0.5fr;
+                    grid-template-rows: 0.5fr 5.5fr 0.5fr 1fr 0.5fr;
+
+                }
+
+                .news {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                    z-index: 3;
+                }
+
+                .social {
+                    grid-column: 2 / 3;
+                    grid-row: 4 / 5;
+                    z-index: 5;
+                }
+                .storm,
+                .pagegap,
+                .mobilebuy,
+                .mobilesocial {
+                    visibility: hidden;
+                }
+
+            }
+
+            /* Portrait tablet  */
+            @supports (display:grid) {
+                @media (min-width: 520px) and (max-width: 999px) and (min-height: 700px) {
+                    .container {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 0.5fr 4fr 0.5fr 5fr 1fr 0.3fr 1fr 1fr 0.75fr;
+                        grid-template-rows: 0.5fr 0.7fr 2.3fr 1.3fr 2fr 5fr 1fr 0.5fr 0.5fr 8fr 1fr;
+                        grid-gap: 0;
+                        height: 100vh;
+                    }
+
+                    .logo {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 5;
+                        z-index: 5;
+                    }
+
+                    .title {
+                        grid-column: 4 / 7;
+                        grid-row: 3 / 5;
+                        z-index: 5;
+                    }
+
+                    .navbuttons {
+                        grid-column: 5 / 8;
+                        grid-row: 10 / 11;
+                        z-index: 5;
+                    }
+
+                    .buy {
+                        grid-column: 7 / 11;
+                        grid-row: 3 / 4;
+                        z-index: 5;
+                    }
+
+                    .batman {
+                        grid-column: 2 / 9;
+                        grid-row: 2 / 8;
+                        z-index: -1;
+                    }
+                    .shaded {
+                        grid-column: 1 / 10;
+                        grid-row: 3 / 4;
+                        z-index: 3;
+                    }
+
+                    .newsgrid {
+                        grid-column: 4 / 6;
+                        grid-row: 5 / 7;
+                        z-index: 5;
+                        display: grid;
+                        grid-template-columns: 0.5fr 5.5fr 0.5fr;
+                        grid-template-rows: 0.5fr 5.5fr 0.5fr 1fr 0.5fr;
+
+                    }
+
+                    .news {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 3;
+                        z-index: 3;
+                    }
+
+                    .social {
+                        grid-column: 2 / 3;
+                        grid-row: 4 / 5;
+                        z-index: 5;
+                    }
+                    .storm {
+                        grid-column: 2 / 9;
+                        grid-row: 9 / 11;
+                        z-index: 3;
+                    }
+                    .pagegap {
+                        grid-column: 1 / 10;
+                        grid-row: 8 / 9;
+                        z-index: 2;
+                    }
+                    .mobilebuy,
+                    .mobilesocial {
+                        visibility: hidden;
+                    }
+                }
+            }
+            /* Portrait phone  */
+            @supports (display:grid) {
+                @media (max-width: 519px) {
+                    .container {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 0.2fr 4fr 0.5fr 5fr 1fr 0.3fr 1fr 1fr 0.75fr;
+                        grid-template-rows: 10px 0.7fr 2.3fr 1.3fr 2fr 5fr 0.5fr 0.5fr 0.5fr 5fr 3fr;
+                        grid-gap: 0;
+                        height: 100vh;
+                    }
+
+                    .logo {
+                        grid-column: 2 / 3;
+                        grid-row: 2 / 5;
+                        z-index: 5;
+                    }
+
+                    .title {
+                        grid-column: 4 / 9;
+                        grid-row: 3 / 5;
+                        z-index: 5;
+                    }
+
+                    .navbuttons {
+                        grid-column: 5 / 8;
+                        grid-row: 10 / 11;
+                        z-index: 5;
+                    }
+
+                    .batman {
+                        grid-column: 1 / 10;
+                        grid-row: 2 / 8;
+                        z-index: -1;
+                    }
+
+                    .shaded {
+                        grid-column: 1 / 10;
+                        grid-row: 3 / 4;
+                        z-index: 3;
+                    }
+
+                    .storm {
+                        grid-column: 1 / 10;
+                        grid-row: 9 / 11;
+                        z-index: 3;
+                    }
+                    .pagegap {
+                        grid-column: 1 / 10;
+                        grid-row: 8 / 9;
+                        z-index: 2;
+                    }
+                    .mobilebuy {
+                        grid-column: 1 / 10;
+                        grid-row: 6 / 7;
+                        z-index: 5;
+                    }
+                    .mobilesocial {
+                        grid-column: 1 / 10;
+                        grid-row: 11 / 12;
+                        z-index: 5;
+                        background-color: white;
+                    }
+                    .newsgrid,
+                    .buy,
+                    .navbuttons {
+                        visibility: hidden;
+                    }
+
+                }
+                @supports (display:grid) {
+                    @media (max-height: 320px) {
+                        .container {
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: 0.2fr 2fr 0.5fr 5fr 1fr 0.3fr 1fr 1fr 0.75fr;
+                            grid-template-rows: 10px 0.7fr 2.3fr 1.3fr 1fr 6fr 0.5fr 0.5fr 0.5fr 3fr 5fr;
+                            grid-gap: 0;
+                            height: 100vh;
+                        }
+
+                        .logo {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 6;
+                            z-index: 5;
+                        }
+
+                        .title {
+                            grid-column: 4 / 9;
+                            grid-row: 3 / 5;
+                            z-index: 5;
+                        }
+
+                        .navbuttons {
+                            grid-column: 5 / 8;
+                            grid-row: 10 / 11;
+                            z-index: 5;
+                        }
+
+                        .batman {
+                            grid-column: 1 / 10;
+                            grid-row: 2 / 11;
+                            z-index: -1;
+                        }
+
+                        .shaded {
+                            grid-column: 1 / 10;
+                            grid-row: 3 / 4;
+                            z-index: 3;
+                        }
+
+                        .storm {
+                            grid-column: 1 / 9;
+                            grid-row: 9 / 11;
+                            z-index: 3;
+                        }
+                        .pagegap {
+                            grid-column: 1 / 10;
+                            grid-row: 8 / 9;
+                            z-index: 2;
+                        }
+                        .mobilebuy {
+                            grid-column: 1 / 10;
+                            grid-row: 6 / 7;
+                            z-index: 5;
+                        }
+                        .mobilesocial {
+                            grid-column: 1 / 10;
+                            grid-row: 11 / 12;
+                            z-index: 5;
+                            background-color: white;
+                        }
+                        .newsgrid,
+                        .buy,
+                        .navbuttons,
+                        .storm,
+                        .pagegap {
+                            visibility: hidden;
+                        }
+                    }
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item logo">Logo</div>
+        <div class="item title">Title</div>
+        <div class="item batman">Batman pic</div>
+        <div class="item newsgrid">
+            <div class="subitem news">News text</div>
+            <div class="subitem social">Social</div>
+        </div>
+        <div class="item navbuttons">NavButtons</div>
+
+        <div class="item buy">Buy buttons</div>
+        <div class="item shaded">ShadedTop</div>
+        <div class="item storm">stormtrooper pic</div>
+        <div class="item pagegap">page gap</div>
+        <div class="item mobilebuy">mobile buy</div>
+        <div class="item mobilesocial">mobile social</div>
+    </div>
+</body>
